@@ -1,0 +1,11 @@
+>Projeto do site
+> home: intro
+> sobre: detalhes
+> projetos: seus projetos
+> contato: forma de contato (formulario)
+
+index.html
+sobre.html
+projeto.html
+contato.html
+style.css

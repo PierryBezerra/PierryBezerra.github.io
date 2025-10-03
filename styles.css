@@ -2,7 +2,7 @@ body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: whitesmoke;
+    background-color:white;
 }
 header{
     background-color: black;
@@ -30,13 +30,11 @@ main{
     text-align: center;
 }
 footer{
-    background-color: black;
-    color: white;
+    color: black;
     text-align: center;
     padding: 10px 0;
-    position: fixed;
+   position: static;
     bottom: 0;
-    width: 100%;
 }
 form{
     display: inline-block;
@@ -57,6 +55,7 @@ section{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    background-color: aquamarine;
 }
 .item{
     background-color: white;
@@ -67,9 +66,53 @@ section{
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.5);
 }
+.item2{
+    padding: 20px;
+    margin: 10px;
+    flex: 1 1 300px;
+    text-align: center;
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 16pt;
+}
+.item3{
+    padding: 20px;
+    margin: 10px;
+    flex: 1 1 300px;
+    text-align: justify;
+   font-family: 'Times New Roman', Times, serif;
+    font-size: 13pt;
+}
+.item4{
+    padding: 5px;
+    margin: 10px;
+    flex: 1 1 100px;
+    text-align: center;
+   font-family: Arial, Helvetica, sans-serif;
+    font-size: 14pt;
+}
+.item5{
+    padding: 5px;
+    margin: 10px;
+    flex: 1 1 100px;
+    text-align: left;
+   font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 12pt;
+}
+.item6{
+    padding: 5px;
+    margin: 10px;
+    flex: 1 1 100px;
+    text-align: justify;
+   font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 12pt;
+}
 #profile{
     width: 300px;
     border-radius: 50%;
+}
+#profile2{
+    width: 150px;
+    border-radius: 60%;
 }
 #table-projetos{
     width: 100%;
