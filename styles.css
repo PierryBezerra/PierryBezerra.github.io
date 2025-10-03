@@ -119,6 +119,7 @@ section{
 #profile2{
     width: 150px;
     border-radius: 60%;
+     text-align: center;
 }
 #table-projetos{
     width: 100%;
