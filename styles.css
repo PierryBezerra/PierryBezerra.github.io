@@ -115,11 +115,12 @@ section{
 #profile{
     width: 300px;
     border-radius: 50%;
+    justify-content: center;
 }
 #profile2{
     width: 150px;
     border-radius: 60%;
-     text-align: center;
+   justify-content: center;
 }
 #table-projetos{
     width: 100%;
