@@ -71,8 +71,6 @@ section{
     text-align: center;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.5);
-    display: flex;
-    flex-direction: column;
 }
 .item2{
     padding: 20px;
@@ -81,8 +79,6 @@ section{
     text-align: center;
    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 16pt;
-    display: flex;
-    flex-direction: column;
 }
 .item3{
     padding: 20px;
@@ -91,8 +87,6 @@ section{
     text-align: justify;
    font-family: 'Times New Roman', Times, serif;
     font-size: 13pt;
-    display: flex;
-    flex-direction: column;
 }
 .item4{
     padding: 5px;
@@ -101,8 +95,6 @@ section{
     text-align: center;
    font-family: Arial, Helvetica, sans-serif;
     font-size: 14pt;
-    display: flex;
-    flex-direction: column;
 }
 .item5{
     padding: 5px;
@@ -111,8 +103,6 @@ section{
     text-align: left;
    font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 12pt;
-    display: flex;
-    flex-direction: column;
 }
 .item6{
     padding: 5px;
@@ -121,8 +111,6 @@ section{
     text-align: justify;
    font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 12pt;
-    display: flex;
-    flex-direction: column;
 }
 #profile{
     width: 300px;
@@ -143,5 +131,4 @@ section{
     flex: 1 1 300px;
     font-family: 'Times New Roman', Times, serif;
     font-size: 16pt;
-
 }
