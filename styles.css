@@ -113,12 +113,12 @@ section{
     font-size: 12pt;
 }
 #profile{
-    width: 280px;
+    width: 20%;
     border-radius: 50%;
     justify-content: center;
 }
 #profile2{
-    width: 400px;
+    width: 20%;
     border-radius: 60%;
    justify-content: center;
 }
