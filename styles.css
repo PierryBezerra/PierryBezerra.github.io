@@ -134,3 +134,9 @@ section{
     font-family: 'Times New Roman', Times, serif;
     font-size: 16pt;
 }
+@media only screen and (max-width:360px) {
+    #table-projetos{
+        width:100%
+    }
+    
+}
