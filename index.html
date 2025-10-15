@@ -1,35 +1,109 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sua empresa nas mãos certas</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sua empresa nas mãos certas</title>
+  <link rel="stylesheet" href="styles.css">
+    <style>
+    .lang-selector {
+      position: absolute;
+      top: 15px;
+      right: 30px;
+    }
+
+    select {
+      padding: 5px 8px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-weight: bold;
+    }
+  </style>
 </head>
+
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li> <a href="index.html">Home</a></li>
-                <li> <a href="sobre.html">Sobre</a></li>
-                <li> <a href="contato.html">Experiências</a></li>
-                <li> <a href="projetos.html">Projetos</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section id="home" class="container">
-            <div class="item">
-            <h1> Bem vindo ao Meu Portifólio</h1>
-            <h2> Eu Sou Pierry</h2>
-            <img id="profile" src="img/pierry9.jpg" alt="Foto do Pierry">
-            <p class="item2"> Venha Conhecer mais sobre mim, minhas formações acadêmicas, experiências e resultados alcançados</p>
-            <p class="item2"><a href="sobre.html"> Click aqui e saiba mais </a></p>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; Cicero Pierry, todos os direitos reservados</p>
-    </footer>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html" data-key="menuHome">Home</a></li>
+        <li><a href="sobre.html" data-key="menuSobre">Sobre</a></li>
+        <li><a href="contato.html" data-key="menuExp">Experiências</a></li>
+        <li><a href="projetos.html" data-key="menuProj">Projetos</a></li>
+      </ul>
+    </nav>
+
+    <!-- 🔽 Seletor de idioma -->
+    <div  class="lang-selector">
+      <select id="idioma">
+        <option value="pt">🇧🇷 Português</option>
+        <option value="en">🇺🇸 English</option>
+      </select>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="container">
+      <div class="item">
+        <h1 data-key="titulo">Bem vindo ao Meu Portifólio</h1>
+        <h2 data-key="subtitulo">Eu Sou Pierry</h2>
+        <img id="profile" src="img/pierry9.jpg" alt="Foto do Pierry">
+        <p class="item2" data-key="descricao">
+          Venha conhecer mais sobre mim, minhas formações acadêmicas, experiências e resultados alcançados
+        </p>
+        <p class="item2">
+          <a href="sobre.html" data-key="linkSaiba">Clique aqui e saiba mais</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p data-key="rodape">&copy; Cicero Pierry, todos os direitos reservados</p>
+  </footer>
+
+  <!-- 🔽 Script de troca de idioma -->
+  <script>
+    const traducoes = {
+      pt: {
+        menuHome: "Home",
+        menuSobre: "Sobre",
+        menuExp: "Experiências",
+        menuProj: "Projetos",
+        titulo: "Bem vindo ao Meu Portifólio",
+        subtitulo: "Eu Sou Pierry",
+        descricao: "Venha conhecer mais sobre mim, minhas formações acadêmicas, experiências e resultados alcançados",
+        linkSaiba: "Clique aqui e saiba mais",
+        rodape: "© Cicero Pierry, todos os direitos reservados"
+      },
+      en: {
+        menuHome: "Home",
+        menuSobre: "About",
+        menuExp: "Experience",
+        menuProj: "Projects",
+        titulo: "Welcome to My Portfolio",
+        subtitulo: "I am Pierry",
+        descricao: "Learn more about me, my academic background, professional experiences, and achievements.",
+        linkSaiba: "Click here to learn more",
+        rodape: "© Cicero Pierry, all rights reserved"
+      }
+    };
+
+    const select = document.getElementById("idioma");
+
+    function mudarIdioma(idioma) {
+      document.querySelectorAll("[data-key]").forEach(el => {
+        const chave = el.getAttribute("data-key");
+        if (traducoes[idioma][chave]) {
+          el.textContent = traducoes[idioma][chave];
+        }
+      });
+    }
+
+    // muda idioma ao trocar opção
+    select.addEventListener("change", e => mudarIdioma(e.target.value));
+
+    // idioma padrão: português
+    mudarIdioma("pt");
+  </script>
 </body>
 </html>

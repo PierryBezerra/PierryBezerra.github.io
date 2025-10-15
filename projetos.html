@@ -2,63 +2,167 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Resultados e Conquistas que podem ser do seu negócio</title>
-      <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados e Conquistas que podem ser do seu negócio</title>
+    <link rel="stylesheet" href="styles.css">
+        <style>
+    .lang-selector {
+      position: absolute;
+      top: 15px;
+      right: 30px;
+    }
+
+    select {
+      padding: 5px 8px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body style="background-image: url(img/pierry3.jpg);background-size: 700px;background-position: center center;">
 <header>
-        <nav>
-            <ul>
-                <li> <a href="index.html">Home</a></li>
-                <li> <a href="sobre.html">Sobre</a></li>
-                <li> <a href="contato.html">Experiências</a></li>
-                <li> <a href="projetos.html">Projetos</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section id="home" class="container2">
-            <h1> Principais Projetos e Conquistas Recentes</h1>
-            <table id="table-projetos">
-                <tr>
-                    <th>Nome do Projeto</th>
-                    <th>Detalhes</th>
-                    <th>Ano</th>
-                </tr>
-                <tr>
-                    <td>Contrato Âncora Goiás e STC ENEL CE</td>
-                    <td>Negociação anual de mais de R$ 500 milhões em novos contratos</td>
-                    <td>2024/2025</td>
-                </tr>
-                <tr>
-                    <td>Núcleo de Faturamento Centralizado (NFC)</td>
-                    <td>Acompanhamento do desempenho do faturamento das novas unidades da empresa, 3 grupos de distribuição de energia e mais de R$ 20 milhões mês</td>
-                    <td>2022/2023</td>
-                </tr>
-                <tr>
-                    <td>Ánalise de Desempenho de Contratos</td>
-                    <td>Recuperação de receitas em contratos em execução: + R$ 30 milhões</td>
-                    <td>2021/2022</td>
-                </tr>
-                <tr>
-                    <td>Innovation Global</td>
-                    <td>Premiações nacionais e internacionais em inovação no setor elétrico, Innovation Challenger</td>
-                    <td>2019/2020</td>
-                </tr>
-                <tr>
-                    <td>Públicações Acadêmicas</td>
-                    <td>Artigo publicado na revista planejamento e politicas públicas ==> <a href="https://www.ipea.gov.br/ppp/index.php/PPP/article/view/923" target="_blank">IPEA GOVERNO FEDERAL </a></td>
-                    <td>2017/2018</td>
-                </tr>
-                <table>
-        </section>
-        <h2 id="item3">  Tenho orgulho em transformar desafios técnicos em soluções inovadoras, mantendo o foco em resultados, eficiência e qualidade. Estou sempre aberto a novos projetos e parcerias que promovam impacto real no setor elétrico e além.</h2>
-        <h3 id="home"> Acesse minha rede social profissional e saiba mais ==> <a href="https://www.linkedin.com/in/cicero-pierry-bezerra-dos-santos-msc-33449272?originalSubdomain=br" target="_blank">Linkedin </a> </h3>
-    </main>
-    <footer>
-        <p>&copy; Cicero Pierry, todos os direitos reservados</p>
-    </footer>
-    
+    <nav>
+        <ul>
+            <li><a id="menu-home" href="index.html">Home</a></li>
+            <li><a id="menu-sobre" href="sobre.html">Sobre</a></li>
+            <li><a id="menu-exp" href="contato.html">Experiências</a></li>
+            <li><a id="menu-proj" href="projetos.html">Projetos</a></li>
+        </ul>
+
+        <!-- Caixa seletora de idioma -->
+        <select id="selectIdioma" onchange="mudarIdioma()" class="lang-selector">
+            <option value="pt">🇧🇷 Português</option>
+            <option value="en">🇺🇸 English</option>
+        </select>
+    </nav>
+</header>
+
+<main>
+    <section id="home" class="container2">
+        <h1 id="titulo">Principais Projetos e Conquistas Recentes</h1>
+        <table id="table-projetos">
+            <tr>
+                <th id="col-projeto">Nome do Projeto</th>
+                <th id="col-detalhes">Detalhes</th>
+                <th id="col-ano">Ano</th>
+            </tr>
+            <tr>
+                <td id="proj1-nome">Contrato Âncora Goiás e STC ENEL CE</td>
+                <td id="proj1-det">Negociação anual de mais de R$ 500 milhões em novos contratos</td>
+                <td>2024/2025</td>
+            </tr>
+            <tr>
+                <td id="proj2-nome">Núcleo de Faturamento Centralizado (NFC)</td>
+                <td id="proj2-det">Acompanhamento do desempenho do faturamento das novas unidades da empresa, 3 grupos de distribuição de energia e mais de R$ 20 milhões mês</td>
+                <td>2022/2023</td>
+            </tr>
+            <tr>
+                <td id="proj3-nome">Ánalise de Desempenho de Contratos</td>
+                <td id="proj3-det">Recuperação de receitas em contratos em execução: + R$ 30 milhões</td>
+                <td>2021/2022</td>
+            </tr>
+            <tr>
+                <td id="proj4-nome">Innovation Global</td>
+                <td id="proj4-det">Premiações nacionais e internacionais em inovação no setor elétrico, Innovation Challenger</td>
+                <td>2019/2020</td>
+            </tr>
+            <tr>
+                <td id="proj5-nome">Públicações Acadêmicas</td>
+                <td id="proj5-det">
+                    Artigo publicado na revista planejamento e politicas públicas ==> 
+                    <a href="https://www.ipea.gov.br/ppp/index.php/PPP/article/view/923" target="_blank">IPEA GOVERNO FEDERAL</a>
+                </td>
+                <td>2017/2018</td>
+            </tr>
+        </table>
+            <h2 id="textoFinal">
+        Tenho orgulho em transformar desafios técnicos em soluções inovadoras, mantendo o foco em resultados, eficiência e qualidade. 
+        Estou sempre aberto a novos projetos e parcerias que promovam impacto real no setor elétrico e além.
+    </h2>
+    <h3 id="linkLinkedin">
+        Acesse minha rede social profissional e saiba mais ==> 
+        <a href="https://www.linkedin.com/in/cicero-pierry-bezerra-dos-santos-msc-33449272?originalSubdomain=br" target="_blank">Linkedin</a>
+    </h3>
+    </section>
+
+
+</main>
+
+<footer>
+    <p id="rodape">&copy; Cicero Pierry, todos os direitos reservados</p>
+</footer>
+
+<script>
+function mudarIdioma() {
+    const lang = document.getElementById('selectIdioma').value;
+
+    if (lang === 'en') {
+        // ====== MENU ======
+        document.getElementById('menu-home').innerText = 'Home';
+        document.getElementById('menu-sobre').innerText = 'About';
+        document.getElementById('menu-exp').innerText = 'Experience';
+        document.getElementById('menu-proj').innerText = 'Projects';
+
+        // ====== CONTEÚDO ======
+        document.getElementById('titulo').innerText = 'Main Projects and Recent Achievements';
+        document.getElementById('col-projeto').innerText = 'Project Name';
+        document.getElementById('col-detalhes').innerText = 'Details';
+        document.getElementById('col-ano').innerText = 'Year';
+
+        document.getElementById('proj1-nome').innerText = 'Anchor Contract Goiás and STC ENEL CE';
+        document.getElementById('proj1-det').innerText = 'Annual negotiation of more than R$ 500 million in new contracts';
+
+        document.getElementById('proj2-nome').innerText = 'Centralized Billing Center (NFC)';
+        document.getElementById('proj2-det').innerText = 'Monitoring the billing performance of new company units, 3 energy distribution groups, and more than R$ 20 million per month';
+
+        document.getElementById('proj3-nome').innerText = 'Contract Performance Analysis';
+        document.getElementById('proj3-det').innerText = 'Revenue recovery in ongoing contracts: + R$ 30 million';
+
+        document.getElementById('proj4-nome').innerText = 'Innovation Global';
+        document.getElementById('proj4-det').innerText = 'National and international innovation awards in the electrical sector, Innovation Challenger';
+
+        document.getElementById('proj5-nome').innerText = 'Academic Publications';
+        document.getElementById('proj5-det').innerHTML = 'Article published in the Planning and Public Policy Journal ==> <a href="https://www.ipea.gov.br/ppp/index.php/PPP/article/view/923" target="_blank">IPEA FEDERAL GOVERNMENT</a>';
+
+        document.getElementById('textoFinal').innerText = 'I take pride in turning technical challenges into innovative solutions, maintaining focus on results, efficiency, and quality. I am always open to new projects and partnerships that promote real impact in the electrical sector and beyond.';
+        document.getElementById('linkLinkedin').innerHTML = 'Access my professional network and learn more ==> <a href="https://www.linkedin.com/in/cicero-pierry-bezerra-dos-santos-msc-33449272?originalSubdomain=br" target="_blank">Linkedin</a>';
+        document.getElementById('rodape').innerText = '© Cicero Pierry, all rights reserved';
+    } 
+    else {
+        // ====== MENU ======
+        document.getElementById('menu-home').innerText = 'Home';
+        document.getElementById('menu-sobre').innerText = 'Sobre';
+        document.getElementById('menu-exp').innerText = 'Experiências';
+        document.getElementById('menu-proj').innerText = 'Projetos';
+
+        // ====== CONTEÚDO ======
+        document.getElementById('titulo').innerText = 'Principais Projetos e Conquistas Recentes';
+        document.getElementById('col-projeto').innerText = 'Nome do Projeto';
+        document.getElementById('col-detalhes').innerText = 'Detalhes';
+        document.getElementById('col-ano').innerText = 'Ano';
+
+        document.getElementById('proj1-nome').innerText = 'Contrato Âncora Goiás e STC ENEL CE';
+        document.getElementById('proj1-det').innerText = 'Negociação anual de mais de R$ 500 milhões em novos contratos';
+
+        document.getElementById('proj2-nome').innerText = 'Núcleo de Faturamento Centralizado (NFC)';
+        document.getElementById('proj2-det').innerText = 'Acompanhamento do desempenho do faturamento das novas unidades da empresa, 3 grupos de distribuição de energia e mais de R$ 20 milhões mês';
+
+        document.getElementById('proj3-nome').innerText = 'Ánalise de Desempenho de Contratos';
+        document.getElementById('proj3-det').innerText = 'Recuperação de receitas em contratos em execução: + R$ 30 milhões';
+
+        document.getElementById('proj4-nome').innerText = 'Innovation Global';
+        document.getElementById('proj4-det').innerText = 'Premiações nacionais e internacionais em inovação no setor elétrico, Innovation Challenger';
+
+        document.getElementById('proj5-nome').innerText = 'Públicações Acadêmicas';
+        document.getElementById('proj5-det').innerHTML = 'Artigo publicado na revista planejamento e politicas públicas ==> <a href="https://www.ipea.gov.br/ppp/index.php/PPP/article/view/923" target="_blank">IPEA GOVERNO FEDERAL</a>';
+
+        document.getElementById('textoFinal').innerText = 'Tenho orgulho em transformar desafios técnicos em soluções inovadoras, mantendo o foco em resultados, eficiência e qualidade. Estou sempre aberto a novos projetos e parcerias que promovam impacto real no setor elétrico e além.';
+        document.getElementById('linkLinkedin').innerHTML = 'Acesse minha rede social profissional e saiba mais ==> <a href="https://www.linkedin.com/in/cicero-pierry-bezerra-dos-santos-msc-33449272?originalSubdomain=br" target="_blank">Linkedin</a>';
+        document.getElementById('rodape').innerText = '© Cicero Pierry, todos os direitos reservados';
+    }
+}
+</script>
+
 </body>
 </html>

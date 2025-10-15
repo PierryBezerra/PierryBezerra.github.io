@@ -2,59 +2,132 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conhecendo melhor</title>
     <link rel="stylesheet" href="styles.css">
+ <style>
+    .lang-selector {
+      position: absolute;
+      top: 15px;
+      right: 30px;
+    }
+
+    select {
+      padding: 5px 8px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-weight: bold;
+    }
+  </style>
+
 </head>
 <body>
- <header>
-        <nav>
-            <ul>
-                <li> <a href="index.html">Home</a></li>
-                <li> <a href="sobre.html">Sobre</a></li>
-                <li> <a href="contato.html">Experiências</a></li>
-                <li> <a href="projetos.html">Projetos</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section id="home" class="container2">
-            <div class="item"><h1> Sou Cicero Pierry Bezerra dos Santos, MSc</h1>
-            <h2> Brasileiro, Habilitação B, CREA-RN, CREA-PB e CREA-CE</h2>
+<header>
+    <nav>
+        <ul>
+            <li><a href="index.html" id="nav-home">Home</a></li>
+            <li><a href="sobre.html" id="nav-sobre">Sobre</a></li>
+            <li><a href="contato.html" id="nav-contato">Experiências</a></li>
+            <li><a href="projetos.html" id="nav-projetos">Projetos</a></li>
+        </ul>
+    </nav>
+    <div class="lang-selector">
+    <button id="btnIdioma" onclick="mudarIdioma()">🇺🇸 English</button>
+    </div>
+</header>
+
+<main>
+    <section id="home" class="container2">
+        <div class="item">
+            <h1 id="titulo1">Sou Cicero Pierry Bezerra dos Santos, MSc</h1>
+            <h2 id="titulo2">Brasileiro, Habilitação B, CREA-RN, CREA-PB e CREA-CE</h2>
             <img id="profile2" src="img/pierry.jpg" alt="Foto do Pierry">
-            <p class="item3">Mestre em Economia e Engenheiro Eletricista, Profissional com mais de 18 anos de experiência em gestão de contratos, operações e manutenção no setor elétrico, atuando em empresas de grande porte como Grupo COSAMPA S/A, ENEL S/A e Grupo GPS S/A. Histórico sólido em negociações milionárias, gestão de equipes próprias e terceirizadas, análise de indicadores (KPI’s), melhoria de processos e rentabilidade de projetos.
+            <p class="item3" id="descricao1">
+                Mestre em Economia e Engenheiro Eletricista, profissional com mais de 18 anos de experiência em gestão de contratos, operações e manutenção no setor elétrico, atuando em empresas de grande porte como Grupo COSAMPA S/A, ENEL S/A e Grupo GPS S/A. Histórico sólido em negociações milionárias, gestão de equipes próprias e terceirizadas, análise de indicadores (KPI’s), melhoria de processos e rentabilidade de projetos.Reconhecido por resultados expressivos em recuperação de receitas, fechamento de contratos de alto valor e implementação de metodologias de eficiência operacional.
+            </p>
 
-Reconhecido por resultados expressivos em recuperação de receitas, fechamento de contratos de alto valor e implementação de metodologias de eficiência operacional.
-</p>
-    <h3 class="item4"> Formação Acadêmica</h3>
-<p class="item5">UNIVERSIDADE FEDERAL DO CEARÁ – MESTRADO ECONOMIA APLICADA </p>
-<p class="item5">UNIVERSIDADE REGIONAL DO CARIRI – GRADUAÇÃO CIÊNCIAS ECONOMICAS </p>
-<p class="item5">INSTITUTO FEDERAL DA PARAIBA (IFPB)/UNIVERSIDADE  POTIGUAR (UNP) – ENGENHARIA ELÉTRICA </p>
-<p class="item5">INSTITUTO FEDERAL DO CEARÁ – ELETROTÉCNICO </p>
+            <h3 class="item4" id="formacaoTitulo">Formação Acadêmica</h3>
+            <p class="item5" id="formacao1">UNIVERSIDADE FEDERAL DO CEARÁ – MESTRADO ECONOMIA APLICADA</p>
+            <p class="item5" id="formacao2">UNIVERSIDADE REGIONAL DO CARIRI – GRADUAÇÃO CIÊNCIAS ECONOMICAS</p>
+            <p class="item5" id="formacao3">INSTITUTO FEDERAL DA PARAIBA (IFPB)/UNIVERSIDADE POTIGUAR (UNP) – ENGENHARIA ELÉTRICA</p>
+            <p class="item5" id="formacao4">INSTITUTO FEDERAL DO CEARÁ – ELETROTÉCNICO</p>
 
-<h4 class="item4"> Formação Complementar</h4>
-<p class="item5">Facilitador no método de gestão da rotina, facilitador academia de lideres in company, formação em BPMN, auditor líder ISO 14.001, cursos de transformadores de força (manutenção e ensaios), inspeção em linhas de AT, equipamentos telecomandados e smartgrid, proteção e automação de SED’S e redes de MT, ensaios e testes elétricos e eletromecânicos, curso de FV (montagem e manutenção), curso de geração heliotérmica, engenharia da confiabilidade, técnicas manutenção PCM,  Lean Manufacture, simulações ARENA (Teoria das filas).</p>
+            <h4 class="item4" id="formComplementarTitulo">Formação Complementar</h4>
+            <p class="item5" id="formComplementar">
+                Facilitador no método de gestão da rotina, facilitador academia de líderes in company, formação em BPMN, auditor líder ISO 14.001, cursos de transformadores de força (manutenção e ensaios), inspeção em linhas de AT, equipamentos telecomandados e smartgrid, proteção e automação de SED’S e redes de MT, ensaios e testes elétricos e eletromecânicos, curso de FV (montagem e manutenção), curso de geração heliotérmica, engenharia da confiabilidade, técnicas manutenção PCM, Lean Manufacture, simulações ARENA (Teoria das filas).
+            </p>
 
-<h5 class="item4"> Habilidades</h5>
+            <h5 class="item4" id="habilidadesTitulo">Habilidades</h5>
             <table id="table-projetos">
                 <tr>
-                    <th>Comportamentais</th>
-                    <th>Linguisticas</th>
-                    <th>Informáticas</th>
+                    <th id="th1">Comportamentais</th>
+                    <th id="th2">Linguísticas</th>
+                    <th id="th3">Informáticas</th>
                 </tr>
                 <tr>
-                    <td class="item3">Comunicação em público, gestão de conflitos, desenvolvimento da equipe, empatia, flexibilidade, engajamento, dinamismo e inovação.</td>
-                    <td  class="item3">Inglês – Avançado; Espanhol – Intermediário; Italiano – Básico.</td>
-                    <td class="item3">	C e C++ (avançado); R*(avançado); Excel (avançado); Power BI (avançado); Visual Básic (avançado); Word (intermediário); Power Point (Intermediário.); HTML5 (básico); Python (básico).</td>
+                    <td class="item3" id="td1">Comunicação em público, gestão de conflitos, desenvolvimento da equipe, empatia, flexibilidade, engajamento, dinamismo e inovação.</td>
+                    <td class="item3" id="td2">Inglês – Avançado; Espanhol – Intermediário; Italiano – Básico.</td>
+                    <td class="item3" id="td3">C e C++ (avançado); R (avançado); Excel (avançado); Power BI (avançado); Visual Basic (avançado); Word (intermediário); PowerPoint (intermediário); HTML5 (básico); Python (básico).</td>
                 </tr>
-                <table>
-<p class="item4"><a href="contato.html"> >>>> Continue para ver minhas experiências >>>> </a></p>
-</div>
-        </section>
-    </main>
-      
+            </table>
+            <p class="item4" id="continuar"><a href="contato.html"> >>>> Continue para ver minhas experiências >>>> </a></p>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <h6 id="rodape">&copy; Cicero Pierry, todos os direitos reservados</h6>
+</footer>
+
+<script>
+let idioma = "pt";
+
+function mudarIdioma() {
+    if (idioma === "pt") {
+        idioma = "en";
+        document.getElementById("btnIdioma").innerText = "🇧🇷 Português";
+        document.documentElement.lang = "en";
+        document.title = "Getting to Know Better";
+
+        // Menu
+        document.getElementById("nav-home").innerText = "Home";
+        document.getElementById("nav-sobre").innerText = "About";
+        document.getElementById("nav-contato").innerText = "Experience";
+        document.getElementById("nav-projetos").innerText = "Projects";
+
+        // Textos principais
+        document.getElementById("titulo1").innerText = "I am Cicero Pierry Bezerra dos Santos, MSc";
+        document.getElementById("titulo2").innerText = "Brazilian, Category B Driver’s License, CREA-RN, CREA-PB and CREA-CE";
+        document.getElementById("descricao1").innerText =
+            "Master in Economics and Electrical Engineer, with over 18 years of experience in contract management, operations and maintenance in the electrical sector, working for major companies such as Grupo COSAMPA S/A, ENEL S/A, and Grupo GPS S/A. Strong background in high-value negotiations, managing internal and outsourced teams, KPI analysis, process improvement, and project profitability. Recognized for outstanding results in revenue recovery, closing high-value contracts, and implementing operational efficiency methodologies.";
+
+        // Formação
+        document.getElementById("formacaoTitulo").innerText = "Academic Background";
+        document.getElementById("formacao1").innerText = "FEDERAL UNIVERSITY OF CEARÁ – MASTER’S IN APPLIED ECONOMICS";
+        document.getElementById("formacao2").innerText = "REGIONAL UNIVERSITY OF CARIRI – BACHELOR’S IN ECONOMICS";
+        document.getElementById("formacao3").innerText = "FEDERAL INSTITUTE OF PARAÍBA / POTIGUAR UNIVERSITY – ELECTRICAL ENGINEERING";
+        document.getElementById("formacao4").innerText = "FEDERAL INSTITUTE OF CEARÁ – ELECTROTECHNIC TECHNICIAN";
+
+        // Formação complementar
+        document.getElementById("formComplementarTitulo").innerText = "Additional Training";
+        document.getElementById("formComplementar").innerText =
+            "Facilitator in routine management methods, in-company leadership academy facilitator, BPMN certification, ISO 14.001 lead auditor, courses on power transformers (maintenance and testing), high-voltage line inspection, remotely controlled and smart grid equipment, protection and automation of substations and medium-voltage networks, electrical and electromechanical testing, photovoltaic systems, solar thermal generation, reliability engineering, PCM maintenance techniques, Lean Manufacture, and ARENA simulation (queueing theory).";
+
+        // Habilidades
+        document.getElementById("habilidadesTitulo").innerText = "Skills";
+        document.getElementById("th1").innerText = "Behavioral";
+        document.getElementById("th2").innerText = "Linguistic";
+        document.getElementById("th3").innerText = "Technical";
+        document.getElementById("td1").innerText = "Public speaking, conflict management, team development, empathy, flexibility, engagement, dynamism, and innovation.";
+        document.getElementById("td2").innerText = "English – Advanced; Spanish – Intermediate; Italian – Basic.";
+        document.getElementById("td3").innerText = "C and C++ (advanced); R (advanced); Excel (advanced); Power BI (advanced); Visual Basic (advanced); Word (intermediate); PowerPoint (intermediate); HTML5 (basic); Python (basic).";
+
+        document.getElementById("continuar").innerHTML = `<a href="contato.html"> >>>> Continue to see my experiences >>>> </a>`;
+        document.getElementById("rodape").innerText = "© Cicero Pierry, all rights reserved.";
+    } else {
+        location.reload(); // volta ao português recarregando
+    }
+}
+</script>
 </body>
-    <footer>
-        <h6>&copy; Cicero Pierry, todos os direitos reservados</h6>
-    </footer>
 </html>

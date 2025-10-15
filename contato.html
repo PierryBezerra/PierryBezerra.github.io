@@ -1,42 +1,115 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Conhecimento compartilhado e aprendizado</title>
-      <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conhecimento compartilhado e aprendizado</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .lang-selector {
+      position: absolute;
+      top: 15px;
+      right: 30px;
+    }
+
+    select {
+      padding: 5px 8px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-weight: bold;
+    }
+  </style>
 </head>
-<body style="background-image: url(img/pierry5.jpg);background-size: 600px;background-position: center center;">
-<header>
-        <nav>
-            <ul>
-                <li> <a href="index.html">Home</a></li>
-                <li> <a href="sobre.html">Sobre</a></li>
-                <li> <a href="contato.html">Experiências</a></li>
-                <li> <a href="projetos.html">Projetos</a></li>
-            </ul>
-        </nav>
-    </header>
-   <main>
-        <section id="home" class="container">
-            <div class="item"><h1> Locais de Desenvolvimento e Contribuições - Últimos 10 anos</h1>
-<p class="item4">COSAMPA PROJETOS E CONSTRUÇÕES LTDA 2013 a 2015: COORDENADOR </p>
-<p class="item6">Atuação na Área de gestão de contratos, folhas de pagamento, impostos e equipes, estudo de viabilidade, elaboração de propostas técnicas e comerciais para novos negócios, acompanhamento de indicadores (produtividade, segurança, receitas e custos), gestão de KPI’s do setor elétrico da empresa, rentabilidade de projetos, produtividade e treinamentos de equipes, relacionamento com os clientes interno e externo, gestão de ativos, aditivos, ajustes de precificação e revisões contratual.
- </p>
- <p class="item4">ENEL DISTRIBUIÇÃO CE S/A 2016 a 2019: RESPONSÁVEL AT/SED/SMARTGRID MT (CENTRO SUL) </p>
-<p class="item6">Gestão direta de colaboradores próprios e equipes parceiras na gestão de equipamentos Especiais, Subestações e LDAT, através gestão de equipes de manutenção e analise de indicadores técnicos, econômicos financeiros, com elaboração de fluxogramas de trabalho, A3 de solução de problemas, planos de ação, simulações e analise de cenários para melhoria dos indicadores e qualidade dos serviços realizados, refletindo nos principais KPI’s do grupo.
- </p>
-<p class="item4">ENEL DISTRIBUIÇÃO CE S/A 2019 a 2019: RESPONSÁVEL DE OPERAÇÕES E MANUTENÇÃO DE BT, MT, AT E SED (CENTRO SUL) </p>
-<p class="item6">Atendimentos técnicos e comerciais na unidade operativa Centro Sul, Centro de Serviço de Senador Pompeu, gestão de colaboradores diretos da EDCE e indireta de equipes parceiras no sistema de potência de alta, média e baixa tensão. </p>
-<p class="item4">CONTROL CONSTRUÇÕES S/A 2019 - ATUAL: GESTOR PLANEJAMENTO E CONTROLE </p>
-<p class="item6">Atuação na área de P&C e Gestão de Contratos, com elaboração de propostas técnicas (habilitações, dimensionamento e defesa de estrutura, levantamento de tempos, movimentos e produtiividade) e comerciais (levantamento de custos de salários, beneficios, ferramentas, equipamentos, despesas administrativas e operacionais, definição de custo por estrutura e preço do certame, negociação e fechamento de contratos) para novos negócios no Brasil e América Latina, gestão de contratos ativos e em desmobilização, negociações, acompanhamento do desempenho, desenho de processos e pleitos junto a contratante, desdobramento estratégico nas unidades operacionais nos estados do Paraíba, Alagoas, Minas Gerais, Goiás e Ceará.</p>
-<p class="item4"><a href="projetos.html"> >>>> Continue para ver meus projetos e resultados alcançados >>>> </a></p>
-</div>
-        </section>
-    </main>
-      
+
+<body style="background-image: url(img/pierry5.jpg); background-size: 600px; background-position: center center;">
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html" data-key="menuHome">Home</a></li>
+        <li><a href="sobre.html" data-key="menuSobre">Sobre</a></li>
+        <li><a href="contato.html" data-key="menuExp">Experiências</a></li>
+        <li><a href="projetos.html" data-key="menuProj">Projetos</a></li>
+      </ul>
+    </nav>
+
+    <!-- seletor de idioma -->
+    <div class="lang-selector">
+      <select id="languageSwitcher">
+        <option value="pt">🇧🇷 Português</option>
+        <option value="en">🇺🇸 English</option>
+      </select>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="container">
+      <div class="item">
+        <h1 data-key="titulo">Locais de Desenvolvimento e Contribuições - Últimos 10 anos</h1>
+
+        <p class="item4" data-key="exp1t">COSAMPA PROJETOS E CONSTRUÇÕES LTDA 2013 a 2015: COORDENADOR</p>
+        <p class="item6" data-key="exp1d">
+          Atuação na Área de gestão de contratos, folhas de pagamento, impostos e equipes, estudo de viabilidade, elaboração de propostas técnicas e comerciais para novos negócios, acompanhamento de indicadores (produtividade, segurança, receitas e custos), gestão de KPI’s do setor elétrico da empresa, rentabilidade de projetos, produtividade e treinamentos de equipes, relacionamento com os clientes interno e externo, gestão de ativos, aditivos, ajustes de precificação e revisões contratual.
+        </p>
+
+        <p class="item4" data-key="exp2t">ENEL DISTRIBUIÇÃO CE S/A 2016 a 2019: RESPONSÁVEL AT/SED/SMARTGRID MT (CENTRO SUL)</p>
+        <p class="item6" data-key="exp2d">
+          Gestão direta de colaboradores próprios e equipes parceiras na gestão de equipamentos Especiais, Subestações e LDAT, através gestão de equipes de manutenção e analise de indicadores técnicos, econômicos financeiros, com elaboração de fluxogramas de trabalho, A3 de solução de problemas, planos de ação, simulações e analise de cenários para melhoria dos indicadores e qualidade dos serviços realizados, refletindo nos principais KPI’s do grupo.
+        </p>
+
+        <p class="item4" data-key="exp3t">ENEL DISTRIBUIÇÃO CE S/A 2019 a 2019: RESPONSÁVEL DE OPERAÇÕES E MANUTENÇÃO DE BT, MT, AT E SED (CENTRO SUL)</p>
+        <p class="item6" data-key="exp3d">
+          Atendimentos técnicos e comerciais na unidade operativa Centro Sul, Centro de Serviço de Senador Pompeu, gestão de colaboradores diretos da EDCE e indireta de equipes parceiras no sistema de potência de alta, média e baixa tensão.
+        </p>
+
+        <p class="item4" data-key="exp4t">CONTROL CONSTRUÇÕES S/A 2019 - ATUAL: GESTOR PLANEJAMENTO E CONTROLE</p>
+        <p class="item6" data-key="exp4d">
+          Atuação na área de P&C e Gestão de Contratos, com elaboração de propostas técnicas (habilitações, dimensionamento e defesa de estrutura, levantamento de tempos, movimentos e produtividade) e comerciais (levantamento de custos de salários, benefícios, ferramentas, equipamentos, despesas administrativas e operacionais, definição de custo por estrutura e preço do certame, negociação e fechamento de contratos) para novos negócios no Brasil e América Latina, gestão de contratos ativos e em desmobilização, negociações, acompanhamento do desempenho, desenho de processos e pleitos junto a contratante, desdobramento estratégico nas unidades operacionais nos estados da Paraíba, Alagoas, Minas Gerais, Goiás e Ceará.
+        </p>
+
+        <p class="item4">
+          <a href="projetos.html" data-key="continue"> >>>> Continue para ver meus projetos e resultados alcançados >>>> </a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <h7 style="-webkit-text-fill-color: aliceblue;" data-key="footer">&copy; Cicero Pierry, todos os direitos reservados</h7>
+  </footer>
+
+  <script>
+    const translations = {
+      en: {
+        menuHome: "Home",
+        menuSobre: "About",
+        menuExp: "Experience",
+        menuProj: "Projects",
+        titulo: "Development Locations and Contributions - Last 10 Years",
+        exp1t: "COSAMPA PROJECTS AND CONSTRUCTIONS LTD 2013 to 2015: COORDINATOR",
+        exp1d: "Worked in contract management, payroll, taxes, and teams, feasibility studies, preparation of technical and commercial proposals for new business, monitoring of indicators (productivity, safety, revenues and costs), management of the company’s electrical sector KPIs, project profitability, productivity and team training, internal and external client relationships, asset management, contractual amendments, pricing adjustments, and contract reviews.",
+        exp2t: "ENEL DISTRIBUTION CE S/A 2016 to 2019: MANAGER AT/SED/SMARTGRID MT (CENTRAL SOUTH)",
+        exp2d: "Direct management of in-house and partner employees in the management of special equipment, substations and LDAT, through maintenance team management and analysis of technical, economic and financial indicators, with preparation of work flowcharts, A3 problem-solving reports, action plans, simulations and scenario analysis for improving indicators and service quality, reflected in the group’s main KPIs.",
+        exp3t: "ENEL DISTRIBUTION CE S/A 2019: OPERATIONS AND MAINTENANCE MANAGER OF LV, MV, HV AND SUBSTATIONS (CENTRAL SOUTH)",
+        exp3d: "Technical and commercial support at the Central South operating unit, Service Center of Senador Pompeu, direct management of EDCE employees and indirect management of partner teams in high, medium and low voltage power systems.",
+        exp4t: "CONTROL CONSTRUÇÕES S/A 2019 - PRESENT: PLANNING AND CONTROL MANAGER",
+        exp4d: "Work in the Planning & Control and Contract Management areas, preparing technical proposals (qualification, sizing and structure defense, time and motion studies, and productivity analysis) and commercial proposals (calculation of salary costs, benefits, tools, equipment, administrative and operational expenses, structure cost definition and bid pricing, negotiation and contract closing) for new business in Brazil and Latin America. Responsible for managing active and demobilizing contracts, negotiations, performance monitoring, process design and claims with clients, and strategic deployment across operational units in the states of Paraíba, Alagoas, Minas Gerais, Goiás and Ceará.",
+        continue: ">>>> Continue to see my projects and achieved results >>>>",
+        footer: "© Cicero Pierry, all rights reserved"
+      },
+      pt: {} // mantém o texto original
+    };
+
+    document.getElementById("languageSwitcher").addEventListener("change", function() {
+      const lang = this.value;
+      document.querySelectorAll("[data-key]").forEach(el => {
+        const key = el.getAttribute("data-key");
+        if (translations[lang][key]) {
+          el.innerHTML = translations[lang][key];
+        } else if (lang === "pt") {
+          location.reload(); // volta ao texto original em português
+        }
+      });
+    });
+  </script>
 </body>
-    <footer>
-        <h7 style="-webkit-text-fill-color: aliceblue;">&copy; Cicero Pierry, todos os direitos reservados</h7>
-    </footer>
 </html>
